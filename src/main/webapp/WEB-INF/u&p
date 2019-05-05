@@ -1,0 +1,34 @@
+admin
+admin
+$2a$10$BbnXL9J94wZQPzm49UKK7ehVEgqw3E3mw452U3l3Znpqk5tcGo0zW
+/****************************************************************************/
+<button class="k-button">Expand</button>
+<div id="treeview"></div>
+
+<script>
+  var datasource = new kendo.data.HierarchicalDataSource({
+    transport: {
+      read: {
+        url: "https://demos.telerik.com/kendo-ui/service/Employees",
+        dataType: "jsonp"
+      }
+    },
+    schema: {
+      model: {
+        id: "EmployeeId",
+        hasChildren: "HasEmployees"
+      }
+    }
+  });
+
+  $("#treeview").kendoTreeView({
+    dataSource: datasource,
+    dataTextField: "FullName"
+  });
+
+  $("button").click(function() {
+    var treeview = $("#treeview").data("kendoTreeView");
+
+    treeview.expandPath([2, 5]);
+  });
+</script>
