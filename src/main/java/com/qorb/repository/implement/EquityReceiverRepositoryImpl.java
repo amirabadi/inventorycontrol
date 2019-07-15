@@ -1,6 +1,8 @@
-package com.qorb.repository;
+package com.qorb.repository.implement;
 
-import com.qorb.model.Permission;
+import com.qorb.model.EquityReceiver;
+import com.qorb.repository.EquityReceiverRepositoryCustome;
+import com.qorb.repository.PersonRepository;
 import com.qorb.utilkendo.DataSourceRequest;
 import com.qorb.utilkendo.DataSourceResult;
 import org.hibernate.Session;
@@ -9,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public class PermissionRepositoryImpl implements PermissionRepositoryCustome {
+public class EquityReceiverRepositoryImpl implements EquityReceiverRepositoryCustome {
     @PersistenceContext
 
     private EntityManager em;
@@ -17,7 +19,7 @@ public class PermissionRepositoryImpl implements PermissionRepositoryCustome {
     PersonRepository personRepository;
 
     @Override
-    public DataSourceResult getAllKendo(DataSourceRequest request, Class<Permission>p) {
+    public DataSourceResult getAllKendo(DataSourceRequest request, Class<EquityReceiver> p) {
         em=em.getEntityManagerFactory().createEntityManager();
         Session session = (Session) em.unwrap(Session.class);
         return request.toDataSourceResult(session, p);

@@ -1,4 +1,4 @@
-package com.qorb.service;
+package com.qorb.service.implement;
 
 import com.qorb.model.EquityReceiver;
 import com.qorb.repository.EquityReceiverRepository;

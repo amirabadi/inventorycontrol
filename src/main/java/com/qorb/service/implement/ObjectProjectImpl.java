@@ -1,7 +1,8 @@
-package com.qorb.service;
+package com.qorb.service.implement;
 
 import com.qorb.model.ObjectProject;
 import com.qorb.repository.ObjectProjectRepository;
+import com.qorb.service.IObjectProject;
 import com.qorb.utilkendo.DropDownListItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

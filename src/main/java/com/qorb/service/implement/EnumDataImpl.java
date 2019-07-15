@@ -1,4 +1,4 @@
-package com.qorb.service;
+package com.qorb.service.implement;
 
 import com.qorb.model.EnumInfo;
 import com.qorb.model.EnumType;

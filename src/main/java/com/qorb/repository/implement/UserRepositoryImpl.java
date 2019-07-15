@@ -1,25 +1,25 @@
-package com.qorb.repository;
+package com.qorb.repository.implement;
 
-import com.qorb.model.Person;
+import com.qorb.model.User;
+import com.qorb.repository.PersonRepository;
+import com.qorb.repository.UserRepositoryCustome;
 import com.qorb.utilkendo.DataSourceRequest;
 import com.qorb.utilkendo.DataSourceResult;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-
-public class PersonRepositoryImpl implements PersonRepositoryCustome {
+public class UserRepositoryImpl implements UserRepositoryCustome {
     @PersistenceContext
-
     private EntityManager em;
+
     @Autowired
     PersonRepository personRepository;
 
     @Override
-    public DataSourceResult getAllKendo(DataSourceRequest request,Class<Person> p) {
+    public DataSourceResult getAllKendo(DataSourceRequest request, Class<User> p) {
         em=em.getEntityManagerFactory().createEntityManager();
         Session session = (Session) em.unwrap(Session.class);
         return request.toDataSourceResult(session, p);

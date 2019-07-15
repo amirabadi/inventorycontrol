@@ -1,10 +1,11 @@
-package com.qorb.service;
+package com.qorb.service.implement;
 
 import com.qorb.model.Permission;
 import com.qorb.repository.EnumRepository;
 import com.qorb.repository.ObjectProjectRepository;
 import com.qorb.repository.PermissionRepository;
 import com.qorb.repository.RoleRepository;
+import com.qorb.service.IAccessLevel;
 import com.qorb.utilkendo.DataSourceRequest;
 import com.qorb.utilkendo.DataSourceResult;
 import org.springframework.beans.factory.annotation.Autowired;

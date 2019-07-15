@@ -1,4 +1,4 @@
-package com.qorb.service;
+package com.qorb.service.implement;
 
 import com.qorb.model.Role;
 import com.qorb.model.Unit;
@@ -6,6 +6,7 @@ import com.qorb.model.User;
 import com.qorb.repository.RoleRepository;
 import com.qorb.repository.UnitRepository;
 import com.qorb.repository.UserRepository;
+import com.qorb.service.IUser;
 import com.qorb.utilkendo.DataSourceRequest;
 import com.qorb.utilkendo.DataSourceResult;
 import org.springframework.beans.factory.annotation.Autowired;

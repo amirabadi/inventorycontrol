@@ -1,7 +1,8 @@
-package com.qorb.service;
+package com.qorb.service.implement;
 
 import com.qorb.model.Person;
 import com.qorb.repository.PersonRepository;
+import com.qorb.service.IPerson;
 import com.qorb.utilkendo.DataSourceRequest;
 import com.qorb.utilkendo.DataSourceResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class PersonImpl implements IPerson{
+public class PersonImpl implements IPerson {
     @Autowired
     PersonRepository personRepository;
     @Override
